@@ -65,6 +65,11 @@ struct _GtkXournal
 	 * Selected content, if any
 	 */
 	EditSelection* selection;
+
+	/**
+	 * Timer ID for enable touch again
+	 */
+	guint timeoutEnabletouch;
 };
 
 struct _GtkXournalClass

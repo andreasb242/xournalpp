@@ -85,6 +85,7 @@ GtkWidget* gtk_xournal_new(XournalView* view)
 	xoj->inScrolling = false;
 
 	xoj->selection = NULL;
+	xoj->timeoutEnabletouch = 0;
 
 	GtkWidget* widget = GTK_WIDGET(xoj);
 	gtk_widget_add_events(widget, GDK_PROXIMITY_IN_MASK | GDK_PROXIMITY_OUT_MASK);
@@ -121,6 +122,13 @@ static void gtk_xournal_class_init(GtkXournalClass* klass)
 	object_class->destroy = gtk_xournal_destroy;
 }
 
+gboolean gtk_xournal_enable_touch_callback(GdkDevice* touchDevice)
+{
+	cout << "Touch enabled (after timeout)" << endl;
+	gdk_device_set_mode (touchDevice, GDK_MODE_SCREEN);
+	return false;
+}
+
 static gboolean gtk_xournal_enable_disable_touch(GtkWidget* widget, gboolean enable) {
 	g_return_val_if_fail(widget != NULL, false);
 	g_return_val_if_fail(GTK_IS_XOURNAL(widget), false);
@@ -153,13 +161,33 @@ static gboolean gtk_xournal_enable_disable_touch(GtkWidget* widget, gboolean ena
 		if (enable)
 		{
 			// TODO add Toolbar icon with status!
-			cout << "Touch enabled" << endl;
-			gdk_device_set_mode (touchDevice, GDK_MODE_SCREEN);
+			int timeout = cfgTouch->getEnableTouchTimeout();
+			if (timeout <= 0)
+			{
+				cout << "Touch enabled" << endl;
+				gdk_device_set_mode (touchDevice, GDK_MODE_SCREEN);
+			}
+			else
+			{
+				if (xournal->timeoutEnabletouch)
+				{
+					g_source_remove(xournal->timeoutEnabletouch);
+				}
+				xournal->timeoutEnabletouch = g_timeout_add_seconds(timeout, (GSourceFunc) gtk_xournal_enable_touch_callback, touchDevice);
+			}
+
+			cout << "Start touch enable timeout (" << timeout << "s)" << endl;
 		}
 		else
 		{
-			cout << "Touch disabled" << endl;
+			if (xournal->timeoutEnabletouch)
+			{
+				// Disable enable timeout, if already planed
+				g_source_remove(xournal->timeoutEnabletouch);
+				xournal->timeoutEnabletouch = 0;
+			}
 			gdk_device_set_mode (touchDevice, GDK_MODE_DISABLED);
+			cout << "Touch disabled" << endl;
 		}
 	}
 

@@ -40,6 +40,7 @@ public:
 	ToolType getAction();
 	bool getDisableDrawing();
 	bool getDisableTouchDeviceOnPenContact();
+	int getEnableTouchTimeout();
 	DrawingType getDrawingType();
 
 private:
@@ -54,6 +55,11 @@ private:
 
 	bool disableDrawing;
 	bool disableTouchDeviceOnPenContact;
+
+	/**
+	 * Timeout (seconds) to enable touchscreen again, if disableTouchDeviceOnPenContact is true
+	 */
+	int enableTouchTimeout;
 
 public:
 	string device;
