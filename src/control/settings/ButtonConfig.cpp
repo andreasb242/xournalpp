@@ -13,7 +13,7 @@ ButtonConfig::ButtonConfig(ToolType action, int color, ToolSize size, DrawingTyp
 	this->eraserMode = eraserMode;
 	this->disableDrawing = false;
 	this->disableTouchDeviceOnPenContact = false;
-	this->enableTouchTimeout = 3;
+	this->enableTouchTimeout = 10;
 }
 
 ButtonConfig::~ButtonConfig()
