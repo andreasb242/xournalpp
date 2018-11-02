@@ -70,6 +70,11 @@ struct _GtkXournal
 	 * Timer ID for enable touch again
 	 */
 	guint timeoutEnabletouch;
+
+	/**
+	 * Touch device to enable
+	 */
+	GdkDevice* touchDevice;
 };
 
 struct _GtkXournalClass

@@ -86,6 +86,7 @@ GtkWidget* gtk_xournal_new(XournalView* view)
 
 	xoj->selection = NULL;
 	xoj->timeoutEnabletouch = 0;
+	xoj->touchDevice = NULL;
 
 	GtkWidget* widget = GTK_WIDGET(xoj);
 	gtk_widget_add_events(widget, GDK_PROXIMITY_IN_MASK | GDK_PROXIMITY_OUT_MASK);
@@ -122,10 +123,16 @@ static void gtk_xournal_class_init(GtkXournalClass* klass)
 	object_class->destroy = gtk_xournal_destroy;
 }
 
-gboolean gtk_xournal_enable_touch_callback(GdkDevice* touchDevice)
+gboolean gtk_xournal_enable_touch_callback(GtkWidget* widget)
 {
+	g_return_val_if_fail(widget != NULL, false);
+	g_return_val_if_fail(GTK_IS_XOURNAL(widget), false);
+
+	GtkXournal* xournal = GTK_XOURNAL(widget);
+	xournal->timeoutEnabletouch = 0;
+
 	cout << "Touch enabled (after timeout)" << endl;
-	gdk_device_set_mode (touchDevice, GDK_MODE_SCREEN);
+	gdk_device_set_mode(xournal->touchDevice, GDK_MODE_SCREEN);
 	return false;
 }
 
@@ -138,21 +145,24 @@ static gboolean gtk_xournal_enable_disable_touch(GtkWidget* widget, gboolean ena
 	ButtonConfig* cfgTouch = settings->getTouchButtonConfig();
 	if (cfgTouch->getDisableTouchDeviceOnPenContact())
 	{
-		GList* devList = gdk_devices_list();
-		GdkDevice* touchDevice = NULL;
-
-		while (devList != NULL)
+		if (xournal->touchDevice == NULL)
 		{
-			GdkDevice* device = (GdkDevice*) devList->data;
-			if (device != gdk_device_get_core_pointer() && cfgTouch->device == device->name)
+			GList* devList = gdk_devices_list();
+			xournal->touchDevice = NULL;
+
+			while (devList != NULL)
 			{
-				touchDevice = device;
-				break;
+				GdkDevice* device = (GdkDevice*) devList->data;
+				if (device != gdk_device_get_core_pointer() && cfgTouch->device == device->name)
+				{
+					xournal->touchDevice = device;
+					break;
+				}
+				devList = devList->next;
 			}
-			devList = devList->next;
 		}
 
-		if (!touchDevice)
+		if (!xournal->touchDevice)
 		{
 			// Touch not found, do nothing
 			return false;
@@ -165,7 +175,7 @@ static gboolean gtk_xournal_enable_disable_touch(GtkWidget* widget, gboolean ena
 			if (timeout <= 0)
 			{
 				cout << "Touch enabled" << endl;
-				gdk_device_set_mode (touchDevice, GDK_MODE_SCREEN);
+				gdk_device_set_mode(xournal->touchDevice, GDK_MODE_SCREEN);
 			}
 			else
 			{
@@ -173,7 +183,7 @@ static gboolean gtk_xournal_enable_disable_touch(GtkWidget* widget, gboolean ena
 				{
 					g_source_remove(xournal->timeoutEnabletouch);
 				}
-				xournal->timeoutEnabletouch = g_timeout_add_seconds(timeout, (GSourceFunc) gtk_xournal_enable_touch_callback, touchDevice);
+				xournal->timeoutEnabletouch = g_timeout_add_seconds(timeout, (GSourceFunc) gtk_xournal_enable_touch_callback, xournal);
 			}
 
 			cout << "Start touch enable timeout (" << timeout << "s)" << endl;
@@ -186,7 +196,7 @@ static gboolean gtk_xournal_enable_disable_touch(GtkWidget* widget, gboolean ena
 				g_source_remove(xournal->timeoutEnabletouch);
 				xournal->timeoutEnabletouch = 0;
 			}
-			gdk_device_set_mode (touchDevice, GDK_MODE_DISABLED);
+			gdk_device_set_mode (xournal->touchDevice, GDK_MODE_DISABLED);
 			cout << "Touch disabled" << endl;
 		}
 	}
