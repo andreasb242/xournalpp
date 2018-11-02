@@ -87,7 +87,7 @@ GtkWidget* gtk_xournal_new(XournalView* view)
 	xoj->selection = NULL;
 
 	GtkWidget* widget = GTK_WIDGET(xoj);
-	gtk_widget_set_events(widget, GDK_PROXIMITY_IN_MASK);
+	gtk_widget_add_events(widget, GDK_PROXIMITY_IN_MASK);
 
 	return widget;
 }
