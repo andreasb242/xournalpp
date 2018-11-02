@@ -12,6 +12,7 @@ ButtonConfig::ButtonConfig(ToolType action, int color, ToolSize size, DrawingTyp
 	this->drawingType = drawingType;
 	this->eraserMode = eraserMode;
 	this->disableDrawing = false;
+	this->disableTouchDeviceOnPenContact = false;
 }
 
 ButtonConfig::~ButtonConfig()
@@ -24,6 +25,13 @@ bool ButtonConfig::getDisableDrawing()
 	XOJ_CHECK_TYPE(ButtonConfig);
 
 	return this->disableDrawing;
+}
+
+bool ButtonConfig::getDisableTouchDeviceOnPenContact()
+{
+	XOJ_CHECK_TYPE(ButtonConfig);
+
+	return this->disableTouchDeviceOnPenContact;
 }
 
 DrawingType ButtonConfig::getDrawingType()

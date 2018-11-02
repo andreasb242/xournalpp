@@ -64,11 +64,16 @@ ButtonConfigGui::ButtonConfigGui(SettingsDialog* dlg, GtkWidget* w,  Settings* s
 		gtk_table_attach(GTK_TABLE(table), cbDisableDrawing, 1, 2, 1, 2,
 						 (GtkAttachOptions) (GTK_EXPAND | GTK_FILL), (GtkAttachOptions) (GTK_FILL), 0, 0);
 
+		cbDisableTouchscreen = gtk_check_button_new_with_label(_C("Complete disable Device on pen contact"));
+
+		gtk_table_attach(GTK_TABLE(table), cbDisableTouchscreen, 1, 2, 2, 3,
+						 (GtkAttachOptions) (GTK_EXPAND | GTK_FILL), (GtkAttachOptions) (GTK_FILL), 0, 0);
 	}
 	else
 	{
 		this->cbDevice = NULL;
 		this->cbDisableDrawing = NULL;
+		this->cbDisableTouchscreen = NULL;
 	}
 
 	GtkListStore* typeModel = gtk_list_store_new(3, GDK_TYPE_PIXBUF, G_TYPE_STRING, G_TYPE_INT);
@@ -100,8 +105,8 @@ ButtonConfigGui::ButtonConfigGui(SettingsDialog* dlg, GtkWidget* w,  Settings* s
 	gtk_cell_layout_pack_start(GTK_CELL_LAYOUT(this->cbTool), renderer, true);
 	gtk_cell_layout_set_attributes(GTK_CELL_LAYOUT(this->cbTool), renderer, "text", 1, NULL);
 
-	gtk_table_attach(GTK_TABLE(table), newLabel(_C("Tool")), 0, 1, 2, 3, GTK_FILL, GTK_FILL, 20, 0);
-	gtk_table_attach(GTK_TABLE(table), cbTool, 1, 2, 2, 3,
+	gtk_table_attach(GTK_TABLE(table), newLabel(_C("Tool")), 0, 1, 12, 13, GTK_FILL, GTK_FILL, 20, 0);
+	gtk_table_attach(GTK_TABLE(table), cbTool, 1, 2, 12, 13,
 					 (GtkAttachOptions) (GTK_EXPAND | GTK_FILL), (GtkAttachOptions) (GTK_FILL), 0, 0);
 
 	this->cbThickness = gtk_combo_box_new_text();
@@ -111,14 +116,14 @@ ButtonConfigGui::ButtonConfigGui(SettingsDialog* dlg, GtkWidget* w,  Settings* s
 	gtk_combo_box_append_text(GTK_COMBO_BOX(cbThickness), _C("Thick"));
 	gtk_combo_box_set_active(GTK_COMBO_BOX(cbThickness), 0);
 
-	gtk_table_attach(GTK_TABLE(table), newLabel(_C("Thickness")), 0, 1, 3, 4,
+	gtk_table_attach(GTK_TABLE(table), newLabel(_C("Thickness")), 0, 1, 13, 14,
 					GTK_FILL, GTK_FILL, 20, 0);
-	gtk_table_attach(GTK_TABLE(table), this->cbThickness, 1, 2, 3, 4,
+	gtk_table_attach(GTK_TABLE(table), this->cbThickness, 1, 2, 13, 14,
 					 (GtkAttachOptions) (GTK_EXPAND | GTK_FILL), (GtkAttachOptions) (GTK_FILL), 0, 0);
 
 	this->colorButton = gtk_color_button_new();
-	gtk_table_attach(GTK_TABLE(table), newLabel(_C("Color")), 0, 1, 4, 5, GTK_FILL, GTK_FILL, 20, 0);
-	gtk_table_attach(GTK_TABLE(table), colorButton, 1, 2, 4, 5,
+	gtk_table_attach(GTK_TABLE(table), newLabel(_C("Color")), 0, 1, 14, 15, GTK_FILL, GTK_FILL, 20, 0);
+	gtk_table_attach(GTK_TABLE(table), colorButton, 1, 2, 14, 15,
 					 (GtkAttachOptions) (GTK_EXPAND | GTK_FILL), (GtkAttachOptions) (GTK_FILL), 0, 0);
 
 	this->cbDrawingType = gtk_combo_box_new_text();
@@ -127,8 +132,8 @@ ButtonConfigGui::ButtonConfigGui(SettingsDialog* dlg, GtkWidget* w,  Settings* s
 	gtk_combo_box_append_text(GTK_COMBO_BOX(this->cbDrawingType), _C("Enable Stroke Recognizer"));
 	gtk_combo_box_append_text(GTK_COMBO_BOX(this->cbDrawingType), _C("Disable Ruler & Stroke Recognizer"));
 
-	gtk_table_attach(GTK_TABLE(table), newLabel(_C("Ruler & Stroke Reco.")), 0, 1, 5, 6, GTK_FILL, GTK_FILL, 20, 0);
-	gtk_table_attach(GTK_TABLE(table), this->cbDrawingType, 1, 2, 5, 6,
+	gtk_table_attach(GTK_TABLE(table), newLabel(_C("Ruler & Stroke Reco.")), 0, 1, 15, 16, GTK_FILL, GTK_FILL, 20, 0);
+	gtk_table_attach(GTK_TABLE(table), this->cbDrawingType, 1, 2, 15, 16,
 					 (GtkAttachOptions) (GTK_EXPAND | GTK_FILL), (GtkAttachOptions) (GTK_FILL), 0, 0);
 
 	this->cbEraserType = gtk_combo_box_new_text();
@@ -137,8 +142,8 @@ ButtonConfigGui::ButtonConfigGui(SettingsDialog* dlg, GtkWidget* w,  Settings* s
 	gtk_combo_box_append_text(GTK_COMBO_BOX(this->cbEraserType), _C("Whiteout"));
 	gtk_combo_box_append_text(GTK_COMBO_BOX(this->cbEraserType), _C("Delete stroke"));
 
-	gtk_table_attach(GTK_TABLE(table), newLabel(_C("Eraser type")), 0, 1, 8, 9, GTK_FILL, GTK_FILL, 20, 0);
-	gtk_table_attach(GTK_TABLE(table), this->cbEraserType, 1, 2, 8, 9,
+	gtk_table_attach(GTK_TABLE(table), newLabel(_C("Eraser type")), 0, 1, 18, 19, GTK_FILL, GTK_FILL, 20, 0);
+	gtk_table_attach(GTK_TABLE(table), this->cbEraserType, 1, 2, 18, 19,
 					 (GtkAttachOptions) (GTK_EXPAND | GTK_FILL), (GtkAttachOptions) (GTK_FILL), 0, 0);
 
 	gtk_container_add(GTK_CONTAINER(w), table);
@@ -248,6 +253,7 @@ void ButtonConfigGui::loadSettings()
 		}
 
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(cbDisableDrawing), cfg->disableDrawing);
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(cbDisableTouchscreen), cfg->disableTouchDeviceOnPenContact);
 	}
 }
 
@@ -329,6 +335,7 @@ void ButtonConfigGui::saveSettings()
 		}
 
 		cfg->disableDrawing = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(cbDisableDrawing));
+		cfg->disableTouchDeviceOnPenContact = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(cbDisableTouchscreen));
 	}
 
 	settings->customSettingsChanged();

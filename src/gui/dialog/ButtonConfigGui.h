@@ -44,6 +44,7 @@ private:
 
 	GtkWidget* cbDevice;
 	GtkWidget* cbDisableDrawing;
+	GtkWidget* cbDisableTouchscreen;
 
 	GtkWidget* cbTool;
 	GtkWidget* cbThickness;

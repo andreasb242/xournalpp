@@ -534,6 +534,7 @@ void Settings::loadButtonConfig()
 				}
 
 				e.getBool("disableDrawing", cfg->disableDrawing);
+				e.getBool("completeDisableOnPenContact", cfg->disableTouchDeviceOnPenContact);
 			}
 		}
 		else
@@ -761,6 +762,7 @@ void Settings::saveButtonConfig()
 		{
 			e.setString("device", cfg->device);
 			e.setBool("disableDrawing", cfg->disableDrawing);
+			e.setBool("completeDisableOnPenContact", cfg->disableTouchDeviceOnPenContact);
 		}
 	}
 }

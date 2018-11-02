@@ -121,28 +121,58 @@ static void gtk_xournal_class_init(GtkXournalClass* klass)
 	object_class->destroy = gtk_xournal_destroy;
 }
 
-static gboolean gtk_xournal_proximity_in_event(GtkWidget* widget, GdkEventProximity* event) {
+static gboolean gtk_xournal_enable_disable_touch(GtkWidget* widget, gboolean enable) {
 	g_return_val_if_fail(widget != NULL, false);
 	g_return_val_if_fail(GTK_IS_XOURNAL(widget), false);
-	g_return_val_if_fail(event != NULL, false);
 
 	GtkXournal* xournal = GTK_XOURNAL(widget);
+	Settings* settings = xournal->view->getControl()->getSettings();
+	ButtonConfig* cfgTouch = settings->getTouchButtonConfig();
+	if (cfgTouch->getDisableTouchDeviceOnPenContact())
+	{
+		GList* devList = gdk_devices_list();
+		GdkDevice* touchDevice = NULL;
 
-	printf("IN ***********************************************\n");
+		while (devList != NULL)
+		{
+			GdkDevice* device = (GdkDevice*) devList->data;
+			if (device != gdk_device_get_core_pointer() && cfgTouch->device == device->name)
+			{
+				touchDevice = device;
+				break;
+			}
+			devList = devList->next;
+		}
+
+		if (!touchDevice)
+		{
+			// Touch not found, do nothing
+			return false;
+		}
+
+		if (enable)
+		{
+			// TODO add Toolbar icon with status!
+			cout << "Touch enabled" << endl;
+			gdk_device_set_mode (touchDevice, GDK_MODE_SCREEN);
+		}
+		else
+		{
+			cout << "Touch disabled" << endl;
+			gdk_device_set_mode (touchDevice, GDK_MODE_DISABLED);
+		}
+	}
 
 	return true;
 }
 
+
+static gboolean gtk_xournal_proximity_in_event(GtkWidget* widget, GdkEventProximity* event) {
+	return gtk_xournal_enable_disable_touch(widget, false);
+}
+
 static gboolean gtk_xournal_proximity_out_event(GtkWidget* widget, GdkEventProximity* event) {
-	g_return_val_if_fail(widget != NULL, false);
-	g_return_val_if_fail(GTK_IS_XOURNAL(widget), false);
-	g_return_val_if_fail(event != NULL, false);
-
-	GtkXournal* xournal = GTK_XOURNAL(widget);
-
-	printf("OUT ***********************************************\n");
-
-	return true;
+	return gtk_xournal_enable_disable_touch(widget, true);
 }
 
 static gboolean gtk_xournal_key_press_event(GtkWidget* widget, GdkEventKey* event)

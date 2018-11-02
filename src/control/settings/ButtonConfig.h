@@ -39,6 +39,7 @@ public:
 	void acceptActions(ToolHandler* toolHandler);
 	ToolType getAction();
 	bool getDisableDrawing();
+	bool getDisableTouchDeviceOnPenContact();
 	DrawingType getDrawingType();
 
 private:
@@ -52,6 +53,7 @@ private:
 	DrawingType drawingType;
 
 	bool disableDrawing;
+	bool disableTouchDeviceOnPenContact;
 
 public:
 	string device;
