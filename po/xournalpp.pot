@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-02 08:09+0100\n"
+"POT-Creation-Date: 2018-11-02 13:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -127,7 +127,7 @@ msgstr ""
 msgid "Change stroke width"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:120
+#: ../src/gui/dialog/ButtonConfigGui.cpp:128
 msgid "Color"
 msgstr ""
 
@@ -138,6 +138,10 @@ msgstr ""
 #: ../src/util/LatexAction.cpp:44
 msgctxt "LaTeX comand"
 msgid "Command is being run."
+msgstr ""
+
+#: ../src/gui/dialog/ButtonConfigGui.cpp:67
+msgid "Complete disable Device on pen contact"
 msgstr ""
 
 #: ../src/gui/sidebar/indextree/SidebarIndexPage.cpp:273
@@ -242,7 +246,7 @@ msgstr ""
 msgid "Delete layer"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:138
+#: ../src/gui/dialog/ButtonConfigGui.cpp:146
 msgid "Delete stroke"
 msgstr ""
 
@@ -250,7 +254,7 @@ msgstr ""
 msgid "Device"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:128
+#: ../src/gui/dialog/ButtonConfigGui.cpp:136
 msgid "Disable Ruler & Stroke Recognizer"
 msgstr ""
 
@@ -274,10 +278,10 @@ msgstr ""
 msgid "Document not loaded! ({1}), {2}"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:77
-#: ../src/gui/dialog/ButtonConfigGui.cpp:108
-#: ../src/gui/dialog/ButtonConfigGui.cpp:125
-#: ../src/gui/dialog/ButtonConfigGui.cpp:135
+#: ../src/gui/dialog/ButtonConfigGui.cpp:85
+#: ../src/gui/dialog/ButtonConfigGui.cpp:116
+#: ../src/gui/dialog/ButtonConfigGui.cpp:133
+#: ../src/gui/dialog/ButtonConfigGui.cpp:143
 msgid "Don't change"
 msgstr ""
 
@@ -318,11 +322,11 @@ msgstr ""
 msgid "Edit text"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:126
+#: ../src/gui/dialog/ButtonConfigGui.cpp:134
 msgid "Enable Ruler"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:127
+#: ../src/gui/dialog/ButtonConfigGui.cpp:135
 msgid "Enable Stroke Recognizer"
 msgstr ""
 
@@ -331,12 +335,12 @@ msgstr ""
 msgid "Erase stroke"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:79
+#: ../src/gui/dialog/ButtonConfigGui.cpp:87
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:267
 msgid "Eraser"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:140
+#: ../src/gui/dialog/ButtonConfigGui.cpp:148
 msgid "Eraser type"
 msgstr ""
 
@@ -448,17 +452,14 @@ msgstr ""
 msgid "Green"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:88
+#: ../src/gui/dialog/ButtonConfigGui.cpp:96
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:433
 msgid "Hand"
 msgstr ""
 
+#: ../src/gui/dialog/ButtonConfigGui.cpp:88
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:411
 msgid "Highlighter"
-msgstr ""
-
-#: ../src/gui/dialog/ButtonConfigGui.cpp:80
-msgid "Hilighter"
 msgstr ""
 
 #: ../src/control/settings/MetadataManager.cpp:66
@@ -481,7 +482,7 @@ msgstr ""
 msgid "Insert elements"
 msgstr ""
 
-#: ../src/undo/InsertUndoAction.cpp:47 ../src/gui/dialog/ButtonConfigGui.cpp:82
+#: ../src/undo/InsertUndoAction.cpp:47 ../src/gui/dialog/ButtonConfigGui.cpp:90
 msgid "Insert image"
 msgstr ""
 
@@ -553,7 +554,7 @@ msgstr ""
 msgid "Mangenta"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:110
+#: ../src/gui/dialog/ButtonConfigGui.cpp:118
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:444
 msgid "Medium"
 msgstr ""
@@ -683,7 +684,7 @@ msgstr ""
 msgid "Paste"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:78
+#: ../src/gui/dialog/ButtonConfigGui.cpp:86
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:350
 msgid "Pen"
 msgstr ""
@@ -731,7 +732,7 @@ msgstr ""
 msgid "Ruler"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:130
+#: ../src/gui/dialog/ButtonConfigGui.cpp:138
 msgid "Ruler & Stroke Reco."
 msgstr ""
 
@@ -790,11 +791,11 @@ msgstr ""
 msgid "Select color"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:85
+#: ../src/gui/dialog/ButtonConfigGui.cpp:93
 msgid "Select rectangle"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:84
+#: ../src/gui/dialog/ButtonConfigGui.cpp:92
 msgid "Select region"
 msgstr ""
 
@@ -830,7 +831,7 @@ msgid ""
 "You have to copy the file to a local directory."
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:136
+#: ../src/gui/dialog/ButtonConfigGui.cpp:144
 msgid "Standard"
 msgstr ""
 
@@ -846,7 +847,14 @@ msgstr ""
 msgid "Supported files"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:81
+#: ../src/gui/dialog/ButtonConfigGui.cpp:71
+msgid ""
+"Tablet needs to be enabled on Xournal++ startup.\n"
+"On some devices the Pen disables the Tablet\n"
+"if its in the mounting."
+msgstr ""
+
+#: ../src/gui/dialog/ButtonConfigGui.cpp:89
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:413
 msgid "Text"
 msgstr ""
@@ -931,16 +939,16 @@ msgstr ""
 msgid "There was an error displaying help: {1}"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:111
+#: ../src/gui/dialog/ButtonConfigGui.cpp:119
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:446
 msgid "Thick"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:114
+#: ../src/gui/dialog/ButtonConfigGui.cpp:122
 msgid "Thickness"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:109
+#: ../src/gui/dialog/ButtonConfigGui.cpp:117
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:442
 msgid "Thin"
 msgstr ""
@@ -957,7 +965,7 @@ msgstr ""
 msgid "Toggle fullscreen"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:103
+#: ../src/gui/dialog/ButtonConfigGui.cpp:111
 msgid "Tool"
 msgstr ""
 
@@ -1030,7 +1038,7 @@ msgstr ""
 msgid "Vertical Space"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:83
+#: ../src/gui/dialog/ButtonConfigGui.cpp:91
 msgid "Vertical space"
 msgstr ""
 
@@ -1039,7 +1047,7 @@ msgstr ""
 msgid "White"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:137
+#: ../src/gui/dialog/ButtonConfigGui.cpp:145
 msgid "Whiteout"
 msgstr ""
 

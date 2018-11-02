@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-02 08:09+0100\n"
+"POT-Creation-Date: 2018-11-02 13:14+0100\n"
 "PO-Revision-Date: 2017-09-18 09:58+0200\n"
 "Last-Translator: Jan Hrdina <jan.hrdka@gmail.com>\n"
 "Language-Team: čeština <>\n"
@@ -448,7 +448,7 @@ msgstr "Zavřít"
 msgid "Close Sidebar"
 msgstr "Skrýt postranní panel"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:120
+#: ../src/gui/dialog/ButtonConfigGui.cpp:125
 msgid "Color"
 msgstr "Barva"
 
@@ -460,6 +460,10 @@ msgstr "Neznámá barva „{1}“ (nedefinovaná ve výchozím seznamu barev)!"
 msgctxt "LaTeX comand"
 msgid "Command is being run."
 msgstr "Příkaz je spuštěn."
+
+#: ../src/gui/dialog/ButtonConfigGui.cpp:67
+msgid "Complete disable Device on pen contact"
+msgstr ""
 
 #: ../src/gui/sidebar/indextree/SidebarIndexPage.cpp:273
 msgid "Contents"
@@ -583,7 +587,7 @@ msgstr "Smazat aktuální stránku"
 msgid "Delete layer"
 msgstr "Smazat vrstvu"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:138
+#: ../src/gui/dialog/ButtonConfigGui.cpp:143
 msgid "Delete stroke"
 msgstr "Odstranit čáru"
 
@@ -591,7 +595,7 @@ msgstr "Odstranit čáru"
 msgid "Device"
 msgstr "Zařízení"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:128
+#: ../src/gui/dialog/ButtonConfigGui.cpp:133
 msgid "Disable Ruler & Stroke Recognizer"
 msgstr "Zakázat pravítko a rozpoznávání tvarů"
 
@@ -615,10 +619,10 @@ msgstr "Dokument není kompletní (jeho konec je nejspíš uřízlý)"
 msgid "Document not loaded! ({1}), {2}"
 msgstr "Dokument není načten! ({1}), {2}"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:77
-#: ../src/gui/dialog/ButtonConfigGui.cpp:108
-#: ../src/gui/dialog/ButtonConfigGui.cpp:125
-#: ../src/gui/dialog/ButtonConfigGui.cpp:135
+#: ../src/gui/dialog/ButtonConfigGui.cpp:82
+#: ../src/gui/dialog/ButtonConfigGui.cpp:113
+#: ../src/gui/dialog/ButtonConfigGui.cpp:130
+#: ../src/gui/dialog/ButtonConfigGui.cpp:140
 msgid "Don't change"
 msgstr "Beze změny"
 
@@ -663,11 +667,11 @@ msgstr "Kreslit od ruky"
 msgid "Edit text"
 msgstr "Upravit text"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:126
+#: ../src/gui/dialog/ButtonConfigGui.cpp:131
 msgid "Enable Ruler"
 msgstr "Povolit pravítko"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:127
+#: ../src/gui/dialog/ButtonConfigGui.cpp:132
 msgid "Enable Stroke Recognizer"
 msgstr "Povolit rozpoznávání tvarů"
 
@@ -676,7 +680,7 @@ msgstr "Povolit rozpoznávání tvarů"
 msgid "Erase stroke"
 msgstr "Vymazat čáru"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:79
+#: ../src/gui/dialog/ButtonConfigGui.cpp:84
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:267
 msgid "Eraser"
 msgstr "Guma"
@@ -685,7 +689,7 @@ msgstr "Guma"
 msgid "Eraser Optio_ns"
 msgstr "_Nastavení gumy"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:140
+#: ../src/gui/dialog/ButtonConfigGui.cpp:145
 msgid "Eraser type"
 msgstr "Typ gumy"
 
@@ -819,7 +823,7 @@ msgstr "Zelená"
 msgid "H_and Tool"
 msgstr "_Nástroj prohlížení"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:88
+#: ../src/gui/dialog/ButtonConfigGui.cpp:93
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:433
 msgid "Hand"
 msgstr "Ruka"
@@ -836,6 +840,7 @@ msgstr "Skrýt lištu menu"
 msgid "Hide Sidebar"
 msgstr "Skrýt postranní panel"
 
+#: ../src/gui/dialog/ButtonConfigGui.cpp:85
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:411
 msgid "Highlighter"
 msgstr "Zvýrazňovač"
@@ -843,10 +848,6 @@ msgstr "Zvýrazňovač"
 #: ../ui/main.glade:1111
 msgid "Highlighter opt_ions"
 msgstr "Volby _zvýrazňovače"
-
-#: ../src/gui/dialog/ButtonConfigGui.cpp:80
-msgid "Hilighter"
-msgstr "Zvýrazňovač"
 
 #: ../src/control/settings/MetadataManager.cpp:66
 #: ../src/control/settings/MetadataManager.cpp:89
@@ -884,7 +885,7 @@ msgstr "Vkládat stránky typu"
 msgid "Insert elements"
 msgstr "Vložit prvky"
 
-#: ../src/undo/InsertUndoAction.cpp:47 ../src/gui/dialog/ButtonConfigGui.cpp:82
+#: ../src/undo/InsertUndoAction.cpp:47 ../src/gui/dialog/ButtonConfigGui.cpp:87
 msgid "Insert image"
 msgstr "Vložit obrázek"
 
@@ -969,7 +970,7 @@ msgstr "Spravovat nástrojovou lištu"
 msgid "Mangenta"
 msgstr "Purpurová"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:110
+#: ../src/gui/dialog/ButtonConfigGui.cpp:115
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:444
 msgid "Medium"
 msgstr "Střední"
@@ -1163,7 +1164,7 @@ msgstr "Pozadí _papíru"
 msgid "Paste"
 msgstr "Vložit"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:78
+#: ../src/gui/dialog/ButtonConfigGui.cpp:83
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:350
 msgid "Pen"
 msgstr "Pero"
@@ -1235,7 +1236,7 @@ msgstr "Linkovaný"
 msgid "Ruler"
 msgstr "Pravítko"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:130
+#: ../src/gui/dialog/ButtonConfigGui.cpp:135
 msgid "Ruler & Stroke Reco."
 msgstr "Pravítko a rozpoz. čáry"
 
@@ -1314,11 +1315,11 @@ msgstr "Vybrat jiné PDF"
 msgid "Select color"
 msgstr "Vybrat barvu"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:85
+#: ../src/gui/dialog/ButtonConfigGui.cpp:90
 msgid "Select rectangle"
 msgstr "Obdélníkový výběr"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:84
+#: ../src/gui/dialog/ButtonConfigGui.cpp:89
 msgid "Select region"
 msgstr "Výběr oblasti"
 
@@ -1387,7 +1388,7 @@ msgstr ""
 "Omlouváme se, ale Xournal v tuto chvíli nedokáže otevírat vzdálené soubory.\n"
 "Musíte soubor zkopírovat do místní složky."
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:136
+#: ../src/gui/dialog/ButtonConfigGui.cpp:141
 msgid "Standard"
 msgstr "Standardní"
 
@@ -1415,7 +1416,7 @@ msgstr "Ná_strojové lišty"
 msgid "Template:"
 msgstr "Šablona:"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:81
+#: ../src/gui/dialog/ButtonConfigGui.cpp:86
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:413
 msgid "Text"
 msgstr "Text"
@@ -1518,16 +1519,16 @@ msgstr ""
 msgid "There was an error displaying help: {1}"
 msgstr "Při zobrazování nápovědy došlo k chybě: {1}"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:111
+#: ../src/gui/dialog/ButtonConfigGui.cpp:116
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:446
 msgid "Thick"
 msgstr "Tlustá"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:114
+#: ../src/gui/dialog/ButtonConfigGui.cpp:119
 msgid "Thickness"
 msgstr "Tloušťka"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:109
+#: ../src/gui/dialog/ButtonConfigGui.cpp:114
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:442
 msgid "Thin"
 msgstr "Tenká"
@@ -1548,7 +1549,7 @@ msgstr "Tato volba ovlivňuje pouze PNG výstup"
 msgid "Toggle fullscreen"
 msgstr "Přepnout režim celé obrazovky"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:103
+#: ../src/gui/dialog/ButtonConfigGui.cpp:108
 msgid "Tool"
 msgstr "Nástroj"
 
@@ -1621,7 +1622,7 @@ msgstr "Neuložený dokument"
 msgid "Vertical Space"
 msgstr "Vertikální mezera"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:83
+#: ../src/gui/dialog/ButtonConfigGui.cpp:88
 msgid "Vertical space"
 msgstr "Vertikální mezera"
 
@@ -1634,7 +1635,7 @@ msgstr "Zobrazení"
 msgid "White"
 msgstr "Bílá"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:137
+#: ../src/gui/dialog/ButtonConfigGui.cpp:142
 msgid "Whiteout"
 msgstr "Bělení"
 
@@ -1985,6 +1986,9 @@ msgstr "xoj-preview-extractor: otevírání výstupního souboru „{1}“ selha
 #: ../src/xoj-preview-extractor/xournal-thumbnailer.cpp:104
 msgid "xoj-preview-extractor: successfully extracted"
 msgstr "xoj-preview-extractor: úspěšně extrahováno"
+
+#~ msgid "Hilighter"
+#~ msgstr "Zvýrazňovač"
 
 #~ msgid "cm"
 #~ msgstr "cm"

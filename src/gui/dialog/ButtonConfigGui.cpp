@@ -68,6 +68,9 @@ ButtonConfigGui::ButtonConfigGui(SettingsDialog* dlg, GtkWidget* w,  Settings* s
 
 		gtk_table_attach(GTK_TABLE(table), cbDisableTouchscreen, 1, 2, 2, 3,
 						 (GtkAttachOptions) (GTK_EXPAND | GTK_FILL), (GtkAttachOptions) (GTK_FILL), 0, 0);
+		gtk_table_attach(GTK_TABLE(table), newLabel(_C("Tablet needs to be enabled on Xournal++ startup.\n"
+				"On some devices the Pen disables the Tablet\n"
+				"if its in the mounting.")), 1, 2, 3, 4, GTK_FILL, GTK_FILL, 20, 0);
 	}
 	else
 	{

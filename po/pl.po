@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-02 08:09+0100\n"
+"POT-Creation-Date: 2018-11-02 13:14+0100\n"
 "PO-Revision-Date: 2015-10-01 00:00+0200\n"
 "Last-Translator: Marek Pikuła <marek@pikula.co>\n"
 "Language-Team: Xournal++ team\n"
@@ -445,7 +445,7 @@ msgstr "Zamknij"
 msgid "Close Sidebar"
 msgstr "Ukryj pasek boczny"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:120
+#: ../src/gui/dialog/ButtonConfigGui.cpp:125
 msgid "Color"
 msgstr "Kolor"
 
@@ -457,6 +457,10 @@ msgstr "Nie rozpoznano koloru \"{1}\" (nie zdefiniowany w domyślnych)!"
 msgctxt "LaTeX comand"
 msgid "Command is being run."
 msgstr "Wykonywanie polecenia."
+
+#: ../src/gui/dialog/ButtonConfigGui.cpp:67
+msgid "Complete disable Device on pen contact"
+msgstr ""
 
 #: ../src/gui/sidebar/indextree/SidebarIndexPage.cpp:273
 msgid "Contents"
@@ -582,7 +586,7 @@ msgstr "Usuń aktywną stronę"
 msgid "Delete layer"
 msgstr "Usuń warstwę"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:138
+#: ../src/gui/dialog/ButtonConfigGui.cpp:143
 msgid "Delete stroke"
 msgstr "Usuń kreskę"
 
@@ -590,7 +594,7 @@ msgstr "Usuń kreskę"
 msgid "Device"
 msgstr "Urządzenie"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:128
+#: ../src/gui/dialog/ButtonConfigGui.cpp:133
 msgid "Disable Ruler & Stroke Recognizer"
 msgstr "Wyłącz linijkę i rozpoznawanie kształtów"
 
@@ -614,10 +618,10 @@ msgstr "Dokument jest uszkodzony (możliwe, że jest obcięty)"
 msgid "Document not loaded! ({1}), {2}"
 msgstr "Dokument nie został załadowany! ({1}), {2}"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:77
-#: ../src/gui/dialog/ButtonConfigGui.cpp:108
-#: ../src/gui/dialog/ButtonConfigGui.cpp:125
-#: ../src/gui/dialog/ButtonConfigGui.cpp:135
+#: ../src/gui/dialog/ButtonConfigGui.cpp:82
+#: ../src/gui/dialog/ButtonConfigGui.cpp:113
+#: ../src/gui/dialog/ButtonConfigGui.cpp:130
+#: ../src/gui/dialog/ButtonConfigGui.cpp:140
 msgid "Don't change"
 msgstr "Nie zmieniaj"
 
@@ -662,11 +666,11 @@ msgstr "Rysuj kreskę"
 msgid "Edit text"
 msgstr "Edytuj tekst"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:126
+#: ../src/gui/dialog/ButtonConfigGui.cpp:131
 msgid "Enable Ruler"
 msgstr "Włącz linijkę"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:127
+#: ../src/gui/dialog/ButtonConfigGui.cpp:132
 msgid "Enable Stroke Recognizer"
 msgstr "Włącz rozpoznawanie kształtów"
 
@@ -675,7 +679,7 @@ msgstr "Włącz rozpoznawanie kształtów"
 msgid "Erase stroke"
 msgstr "Wymaż kreskę"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:79
+#: ../src/gui/dialog/ButtonConfigGui.cpp:84
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:267
 msgid "Eraser"
 msgstr "Gumka"
@@ -684,7 +688,7 @@ msgstr "Gumka"
 msgid "Eraser Optio_ns"
 msgstr "Op_cje gumki"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:140
+#: ../src/gui/dialog/ButtonConfigGui.cpp:145
 msgid "Eraser type"
 msgstr "Rodzaj gumki"
 
@@ -818,7 +822,7 @@ msgstr "Zielony"
 msgid "H_and Tool"
 msgstr "N_arzędzie ręki"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:88
+#: ../src/gui/dialog/ButtonConfigGui.cpp:93
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:433
 msgid "Hand"
 msgstr "Przesuń"
@@ -835,6 +839,7 @@ msgstr "Ukryj pasek menu"
 msgid "Hide Sidebar"
 msgstr "Ukryj pasek boczny"
 
+#: ../src/gui/dialog/ButtonConfigGui.cpp:85
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:411
 msgid "Highlighter"
 msgstr "Zakreślacz"
@@ -842,10 +847,6 @@ msgstr "Zakreślacz"
 #: ../ui/main.glade:1111
 msgid "Highlighter opt_ions"
 msgstr "Opc_je zakreślacza"
-
-#: ../src/gui/dialog/ButtonConfigGui.cpp:80
-msgid "Hilighter"
-msgstr "Zakreślacz"
 
 #: ../src/control/settings/MetadataManager.cpp:66
 #: ../src/control/settings/MetadataManager.cpp:89
@@ -883,7 +884,7 @@ msgstr "Rodzaj wstawianej strony"
 msgid "Insert elements"
 msgstr "Wstaw elementy"
 
-#: ../src/undo/InsertUndoAction.cpp:47 ../src/gui/dialog/ButtonConfigGui.cpp:82
+#: ../src/undo/InsertUndoAction.cpp:47 ../src/gui/dialog/ButtonConfigGui.cpp:87
 msgid "Insert image"
 msgstr "Wstaw obraz"
 
@@ -968,7 +969,7 @@ msgstr "Zarządzaj paskiem narzędzi"
 msgid "Mangenta"
 msgstr "Magenta"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:110
+#: ../src/gui/dialog/ButtonConfigGui.cpp:115
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:444
 msgid "Medium"
 msgstr "Średnia"
@@ -1162,7 +1163,7 @@ msgstr "_Tło papieru"
 msgid "Paste"
 msgstr "Wklej"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:78
+#: ../src/gui/dialog/ButtonConfigGui.cpp:83
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:350
 msgid "Pen"
 msgstr "Pióro"
@@ -1234,7 +1235,7 @@ msgstr "Linie z marginesem"
 msgid "Ruler"
 msgstr "Linijka"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:130
+#: ../src/gui/dialog/ButtonConfigGui.cpp:135
 msgid "Ruler & Stroke Reco."
 msgstr "Linijka i rozpozn. kształtów"
 
@@ -1313,11 +1314,11 @@ msgstr "Wybierz inny PDF"
 msgid "Select color"
 msgstr "Wybierz kolor"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:85
+#: ../src/gui/dialog/ButtonConfigGui.cpp:90
 msgid "Select rectangle"
 msgstr "Wybierz prostokąt"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:84
+#: ../src/gui/dialog/ButtonConfigGui.cpp:89
 msgid "Select region"
 msgstr "Wybierz obszar"
 
@@ -1388,7 +1389,7 @@ msgstr ""
 "sieciowych.\n"
 "Musisz go skopiować do lokalnego folderu."
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:136
+#: ../src/gui/dialog/ButtonConfigGui.cpp:141
 msgid "Standard"
 msgstr "Standardowe"
 
@@ -1416,7 +1417,7 @@ msgstr "_Paski narzędzi"
 msgid "Template:"
 msgstr "Szablon:"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:81
+#: ../src/gui/dialog/ButtonConfigGui.cpp:86
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:413
 msgid "Text"
 msgstr "Tekst"
@@ -1519,16 +1520,16 @@ msgstr ""
 msgid "There was an error displaying help: {1}"
 msgstr "Błąd podczas wyświetlania pomocy: {1}"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:111
+#: ../src/gui/dialog/ButtonConfigGui.cpp:116
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:446
 msgid "Thick"
 msgstr "Gruby"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:114
+#: ../src/gui/dialog/ButtonConfigGui.cpp:119
 msgid "Thickness"
 msgstr "Grubość"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:109
+#: ../src/gui/dialog/ButtonConfigGui.cpp:114
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:442
 msgid "Thin"
 msgstr "Cienki"
@@ -1549,7 +1550,7 @@ msgstr "Ta opcja ma znaczenie tylko dla plików PNG"
 msgid "Toggle fullscreen"
 msgstr "Zmień pełny ekran"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:103
+#: ../src/gui/dialog/ButtonConfigGui.cpp:108
 msgid "Tool"
 msgstr "Narzędzie"
 
@@ -1622,7 +1623,7 @@ msgstr "Niezapisany dokument"
 msgid "Vertical Space"
 msgstr "Odstęp pionowy"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:83
+#: ../src/gui/dialog/ButtonConfigGui.cpp:88
 msgid "Vertical space"
 msgstr "Odstęp pionowy"
 
@@ -1635,7 +1636,7 @@ msgstr "Widok"
 msgid "White"
 msgstr "Biały"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:137
+#: ../src/gui/dialog/ButtonConfigGui.cpp:142
 msgid "Whiteout"
 msgstr "Wybielanie"
 
@@ -1995,6 +1996,9 @@ msgstr "xoj-preview-extractor: stworzono miniaturkę"
 #~ msgstr ""
 #~ "Błąd przy otwieraniu pliku \"{1}\"\n"
 #~ "{2}"
+
+#~ msgid "Hilighter"
+#~ msgstr "Zakreślacz"
 
 #~ msgid "Layer %i"
 #~ msgstr "Warstwa %i"

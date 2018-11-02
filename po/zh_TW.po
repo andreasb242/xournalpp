@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xournalpp 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-02 08:09+0100\n"
+"POT-Creation-Date: 2018-11-02 13:14+0100\n"
 "PO-Revision-Date: 2018-02-07 00:00+200\n"
 "Last-Translator: Ruo Li <rli@math.pku.edu.cn>\n"
 "Language-Team: Xournal++ team\n"
@@ -409,7 +409,7 @@ msgstr "關閉"
 msgid "Close Sidebar"
 msgstr "關閉側邊欄"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:120
+#: ../src/gui/dialog/ButtonConfigGui.cpp:125
 msgid "Color"
 msgstr "顏色"
 
@@ -421,6 +421,10 @@ msgstr "色彩\"{1}\"未定義！"
 msgctxt "LaTeX comand"
 msgid "Command is being run."
 msgstr "命令正在運行。"
+
+#: ../src/gui/dialog/ButtonConfigGui.cpp:67
+msgid "Complete disable Device on pen contact"
+msgstr ""
 
 #: ../src/gui/sidebar/indextree/SidebarIndexPage.cpp:273
 msgid "Contents"
@@ -544,7 +548,7 @@ msgstr "刪除當前頁"
 msgid "Delete layer"
 msgstr "刪除層"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:138
+#: ../src/gui/dialog/ButtonConfigGui.cpp:143
 msgid "Delete stroke"
 msgstr "刪除筆劃"
 
@@ -552,7 +556,7 @@ msgstr "刪除筆劃"
 msgid "Device"
 msgstr "設備"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:128
+#: ../src/gui/dialog/ButtonConfigGui.cpp:133
 msgid "Disable Ruler & Stroke Recognizer"
 msgstr "取消標尺和筆劃識別"
 
@@ -576,10 +580,10 @@ msgstr "文檔檔案不完整"
 msgid "Document not loaded! ({1}), {2}"
 msgstr "文檔未加載！({1}), {2}"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:77
-#: ../src/gui/dialog/ButtonConfigGui.cpp:108
-#: ../src/gui/dialog/ButtonConfigGui.cpp:125
-#: ../src/gui/dialog/ButtonConfigGui.cpp:135
+#: ../src/gui/dialog/ButtonConfigGui.cpp:82
+#: ../src/gui/dialog/ButtonConfigGui.cpp:113
+#: ../src/gui/dialog/ButtonConfigGui.cpp:130
+#: ../src/gui/dialog/ButtonConfigGui.cpp:140
 msgid "Don't change"
 msgstr "勿作修改"
 
@@ -624,11 +628,11 @@ msgstr "繪製筆劃"
 msgid "Edit text"
 msgstr "編輯文本"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:126
+#: ../src/gui/dialog/ButtonConfigGui.cpp:131
 msgid "Enable Ruler"
 msgstr "激活標尺"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:127
+#: ../src/gui/dialog/ButtonConfigGui.cpp:132
 msgid "Enable Stroke Recognizer"
 msgstr "激活筆劃識別"
 
@@ -637,7 +641,7 @@ msgstr "激活筆劃識別"
 msgid "Erase stroke"
 msgstr "擦除筆劃"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:79
+#: ../src/gui/dialog/ButtonConfigGui.cpp:84
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:267
 msgid "Eraser"
 msgstr "橡皮"
@@ -646,7 +650,7 @@ msgstr "橡皮"
 msgid "Eraser Optio_ns"
 msgstr "橡皮選項(_n)"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:140
+#: ../src/gui/dialog/ButtonConfigGui.cpp:145
 msgid "Eraser type"
 msgstr "橡皮類型"
 
@@ -780,7 +784,7 @@ msgstr "綠色"
 msgid "H_and Tool"
 msgstr "手形工具(_a)"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:88
+#: ../src/gui/dialog/ButtonConfigGui.cpp:93
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:433
 msgid "Hand"
 msgstr "手形工具"
@@ -797,6 +801,7 @@ msgstr "隱藏菜單條"
 msgid "Hide Sidebar"
 msgstr "隱藏側邊欄"
 
+#: ../src/gui/dialog/ButtonConfigGui.cpp:85
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:411
 msgid "Highlighter"
 msgstr "高亮"
@@ -804,10 +809,6 @@ msgstr "高亮"
 #: ../ui/main.glade:1111
 msgid "Highlighter opt_ions"
 msgstr "高亮選項(_i)"
-
-#: ../src/gui/dialog/ButtonConfigGui.cpp:80
-msgid "Hilighter"
-msgstr "高亮"
 
 #: ../src/control/settings/MetadataManager.cpp:66
 #: ../src/control/settings/MetadataManager.cpp:89
@@ -845,7 +846,7 @@ msgstr "插入頁面風格"
 msgid "Insert elements"
 msgstr "插入元素"
 
-#: ../src/undo/InsertUndoAction.cpp:47 ../src/gui/dialog/ButtonConfigGui.cpp:82
+#: ../src/undo/InsertUndoAction.cpp:47 ../src/gui/dialog/ButtonConfigGui.cpp:87
 msgid "Insert image"
 msgstr "插入圖片"
 
@@ -929,7 +930,7 @@ msgstr "定製工具條"
 msgid "Mangenta"
 msgstr "品紅"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:110
+#: ../src/gui/dialog/ButtonConfigGui.cpp:115
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:444
 msgid "Medium"
 msgstr "中"
@@ -1121,7 +1122,7 @@ msgstr "紙張背景(_a)"
 msgid "Paste"
 msgstr "粘貼"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:78
+#: ../src/gui/dialog/ButtonConfigGui.cpp:83
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:350
 msgid "Pen"
 msgstr "畫筆"
@@ -1193,7 +1194,7 @@ msgstr "定標"
 msgid "Ruler"
 msgstr "標尺"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:130
+#: ../src/gui/dialog/ButtonConfigGui.cpp:135
 msgid "Ruler & Stroke Reco."
 msgstr "標尺與筆劃識別"
 
@@ -1272,11 +1273,11 @@ msgstr "選擇其他PDF"
 msgid "Select color"
 msgstr "選色"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:85
+#: ../src/gui/dialog/ButtonConfigGui.cpp:90
 msgid "Select rectangle"
 msgstr "選擇矩形"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:84
+#: ../src/gui/dialog/ButtonConfigGui.cpp:89
 msgid "Select region"
 msgstr "選擇區域"
 
@@ -1342,7 +1343,7 @@ msgstr ""
 "Xournal目前不能打開遠程檔案。\n"
 "請先將檔案拷貝到本地。"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:136
+#: ../src/gui/dialog/ButtonConfigGui.cpp:141
 msgid "Standard"
 msgstr "標準"
 
@@ -1370,7 +1371,7 @@ msgstr "工具條(_o)"
 msgid "Template:"
 msgstr "模板："
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:81
+#: ../src/gui/dialog/ButtonConfigGui.cpp:86
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:413
 msgid "Text"
 msgstr "文本"
@@ -1465,16 +1466,16 @@ msgstr ""
 msgid "There was an error displaying help: {1}"
 msgstr ""
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:111
+#: ../src/gui/dialog/ButtonConfigGui.cpp:116
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:446
 msgid "Thick"
 msgstr "粗"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:114
+#: ../src/gui/dialog/ButtonConfigGui.cpp:119
 msgid "Thickness"
 msgstr "粗細"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:109
+#: ../src/gui/dialog/ButtonConfigGui.cpp:114
 #: ../src/gui/toolbarMenubar/ToolMenuHandler.cpp:442
 msgid "Thin"
 msgstr "細"
@@ -1495,7 +1496,7 @@ msgstr ""
 msgid "Toggle fullscreen"
 msgstr "全屏"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:103
+#: ../src/gui/dialog/ButtonConfigGui.cpp:108
 msgid "Tool"
 msgstr "工具"
 
@@ -1568,7 +1569,7 @@ msgstr "未保存文檔"
 msgid "Vertical Space"
 msgstr "垂直間距"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:83
+#: ../src/gui/dialog/ButtonConfigGui.cpp:88
 msgid "Vertical space"
 msgstr "垂直間距"
 
@@ -1581,7 +1582,7 @@ msgstr "視圖"
 msgid "White"
 msgstr "白色"
 
-#: ../src/gui/dialog/ButtonConfigGui.cpp:137
+#: ../src/gui/dialog/ButtonConfigGui.cpp:142
 msgid "Whiteout"
 msgstr "涂白"
 
@@ -1919,6 +1920,9 @@ msgstr ""
 #: ../src/xoj-preview-extractor/xournal-thumbnailer.cpp:104
 msgid "xoj-preview-extractor: successfully extracted"
 msgstr ""
+
+#~ msgid "Hilighter"
+#~ msgstr "高亮"
 
 #~ msgid "cm"
 #~ msgstr "釐米"
