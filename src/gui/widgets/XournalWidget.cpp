@@ -129,9 +129,9 @@ gboolean gtk_xournal_enable_touch_callback(GtkWidget* widget)
 	g_return_val_if_fail(GTK_IS_XOURNAL(widget), false);
 
 	GtkXournal* xournal = GTK_XOURNAL(widget);
+	cout << "Touch enabled (after timeout) #" << xournal->timeoutEnabletouch << endl;
 	xournal->timeoutEnabletouch = 0;
 
-	cout << "Touch enabled (after timeout)" << endl;
 	gdk_device_set_mode(xournal->touchDevice, GDK_MODE_SCREEN);
 	return false;
 }
@@ -181,18 +181,20 @@ static gboolean gtk_xournal_enable_disable_touch(GtkWidget* widget, gboolean ena
 			{
 				if (xournal->timeoutEnabletouch)
 				{
+					cout << "Cancel timer #" << xournal->timeoutEnabletouch << endl;
 					g_source_remove(xournal->timeoutEnabletouch);
 				}
 				xournal->timeoutEnabletouch = g_timeout_add_seconds(timeout, (GSourceFunc) gtk_xournal_enable_touch_callback, xournal);
+				cout << "Start touch enable timeout (" << timeout << "s)" << endl;
+				cout << "Schedule timer #" << xournal->timeoutEnabletouch << endl;
 			}
-
-			cout << "Start touch enable timeout (" << timeout << "s)" << endl;
 		}
 		else
 		{
 			if (xournal->timeoutEnabletouch)
 			{
 				// Disable enable timeout, if already planed
+				cout << "Cancel timer #" << xournal->timeoutEnabletouch << endl;
 				g_source_remove(xournal->timeoutEnabletouch);
 				xournal->timeoutEnabletouch = 0;
 			}
