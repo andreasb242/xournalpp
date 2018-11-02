@@ -39,6 +39,8 @@ static gboolean gtk_xournal_key_press_event(GtkWidget* widget, GdkEventKey* even
 static gboolean gtk_xournal_key_release_event(GtkWidget* widget, GdkEventKey* event);
 gboolean gtk_xournal_scroll_event(GtkWidget* widget, GdkEventScroll* event);
 static void gtk_xournal_scroll_mouse_event(GtkXournal* xournal, GdkEventMotion* event);
+static gboolean gtk_xournal_proximity_in_event(GtkWidget* widget, GdkEventProximity* event);
+static gboolean gtk_xournal_proximity_out_event(GtkWidget* widget, GdkEventProximity* event);
 
 PageView *current_view;
 
@@ -84,7 +86,10 @@ GtkWidget* gtk_xournal_new(XournalView* view)
 
 	xoj->selection = NULL;
 
-	return GTK_WIDGET(xoj);
+	GtkWidget* widget = GTK_WIDGET(xoj);
+	gtk_widget_set_events(widget, GDK_PROXIMITY_IN_MASK);
+
+	return widget;
 }
 
 static void gtk_xournal_class_init(GtkXournalClass* klass)
@@ -108,9 +113,36 @@ static void gtk_xournal_class_init(GtkXournalClass* klass)
 	widget_class->key_press_event = gtk_xournal_key_press_event;
 	widget_class->key_release_event = gtk_xournal_key_release_event;
 
+	widget_class->proximity_in_event = gtk_xournal_proximity_in_event;
+	widget_class->proximity_out_event = gtk_xournal_proximity_out_event;
+
 	widget_class->expose_event = gtk_xournal_expose;
 
 	object_class->destroy = gtk_xournal_destroy;
+}
+
+static gboolean gtk_xournal_proximity_in_event(GtkWidget* widget, GdkEventProximity* event) {
+	g_return_val_if_fail(widget != NULL, false);
+	g_return_val_if_fail(GTK_IS_XOURNAL(widget), false);
+	g_return_val_if_fail(event != NULL, false);
+
+	GtkXournal* xournal = GTK_XOURNAL(widget);
+
+	printf("IN ***********************************************\n");
+
+	return true;
+}
+
+static gboolean gtk_xournal_proximity_out_event(GtkWidget* widget, GdkEventProximity* event) {
+	g_return_val_if_fail(widget != NULL, false);
+	g_return_val_if_fail(GTK_IS_XOURNAL(widget), false);
+	g_return_val_if_fail(event != NULL, false);
+
+	GtkXournal* xournal = GTK_XOURNAL(widget);
+
+	printf("OUT ***********************************************\n");
+
+	return true;
 }
 
 static gboolean gtk_xournal_key_press_event(GtkWidget* widget, GdkEventKey* event)
