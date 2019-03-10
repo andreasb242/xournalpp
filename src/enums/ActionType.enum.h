@@ -73,6 +73,7 @@ enum ActionType
 	ACTION_DELETE_LAYER,
 	ACTION_PAPER_FORMAT,
 	ACTION_PAPER_BACKGROUND_COLOR,
+	ACTION_CUSTOMIZE_BACKGROUNDS,
 
 	// Menu Tools
 	// Has to be in the same order as in Tool.h: ToolType!
