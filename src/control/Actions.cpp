@@ -1,5 +1,7 @@
 #include "Actions.h"
 
+int dummy_change=0;
+
 ActionEnabledListener::ActionEnabledListener()
 {
 	XOJ_INIT_TYPE(ActionEnabledListener);
